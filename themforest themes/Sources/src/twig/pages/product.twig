@@ -1,0 +1,27 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% set product = products[15] %}
+
+    {% include '/partials/page-header.twig' with {
+        title: product.name,
+        without_title: true
+    } %}
+
+    <div class="block">
+        <div class="container">
+            {% include '/partials/product.twig' with {
+                product: product,
+                layout: 'standard'
+            } %}
+
+            {% include '/partials/product-tabs.twig' %}
+        </div>
+    </div>
+
+    {% include '/blocks/block-products-carousel.twig' with {
+        'title': 'Related Products',
+        'rows': 1,
+        'layout': 'grid-5'
+    } %}
+{% endblock %}

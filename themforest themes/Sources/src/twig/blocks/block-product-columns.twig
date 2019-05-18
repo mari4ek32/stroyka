@@ -1,0 +1,31 @@
+{#
+// inputs:
+// - columns: object[] - array of column data objects (e.g.: {title: '', products: []}, required)
+#}
+
+<!-- .block-product-columns -->
+<div class="block block-product-columns d-lg-block d-none">
+    <div class="container">
+        <div class="row">
+            {% for column in columns %}
+                <div class="col-{{ 12 / columns.length }}">
+                    {% include '/partials/block-header.twig' with {
+                        title: column.title
+                    } only %}
+
+                    <div class="block-product-columns__column">
+                        {% for product in column.products %}
+                            <div class="block-product-columns__item">
+                                {% include '/partials/product-card.twig' with {
+                                    product: product,
+                                    layout: 'horizontal'
+                                } only %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- .block-product-columns / end -->

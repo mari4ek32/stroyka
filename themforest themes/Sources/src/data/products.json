@@ -1,0 +1,171 @@
+[
+  {
+    "name": "Electric Planer Brandix KL370090G 300 Watts",
+    "price": "$749.00",
+    "compare_at_price": null,
+    "rating": 4,
+    "images": [
+      "images/products/product-1"
+    ],
+    "badges": ["new"],
+    "features": {
+      "sku": "83690/32",
+      "weight": "15 Kg",
+      "color": "Red",
+      "material": "Wood"
+    }
+  },
+  {
+    "name": "Undefined Tool IRadix DPS3000SY 2700 Watts",
+    "price": "$1,019.00",
+    "compare_at_price": null,
+    "rating": 5,
+    "images": [
+      "images/products/product-2"
+    ],
+    "badges": ["hot"],
+    "features": {
+      "sku": "83590/15",
+      "weight": "7 Kg",
+      "color": "Brown",
+      "material": "Plastic"
+    }
+  },
+  {
+    "name": "Drill Screwdriver Brandix ALX7054 200 Watts",
+    "price": "$850.00",
+    "compare_at_price": null,
+    "rating": 4,
+    "images": [
+      "images/products/product-3"
+    ],
+    "features": {
+      "sku": "1590/78",
+      "weight": "11 Kg",
+      "color": "Gray",
+      "material": "Metal"
+    }
+  },
+  {
+    "name": "Drill Series 3 Brandix KSR4590PQS 1500 Watts",
+    "price": "$949.00",
+    "compare_at_price": "$1189.00",
+    "rating": 3,
+    "images": [
+      "images/products/product-4"
+    ],
+    "badges": ["sale"]
+  },
+  {
+    "name": "Brandix Router Power Tool 2017ERXPK",
+    "price": "$1,700.00",
+    "compare_at_price": null,
+    "rating": 4,
+    "images": [
+      "images/products/product-5"
+    ]
+  },
+  {
+    "name": "Brandix Drilling Machine DM2019KW4 4kW",
+    "price": "$3,199.00",
+    "compare_at_price": null,
+    "rating": 3,
+    "images": [
+      "images/products/product-6"
+    ]
+  },
+  {
+    "name": "Brandix Pliers",
+    "price": "$24.00",
+    "compare_at_price": null,
+    "rating": 2,
+    "images": [
+      "images/products/product-7"
+    ]
+  },
+  {
+    "name": "Water Hose 40cm",
+    "price": "$15.00",
+    "compare_at_price": null,
+    "rating": 2,
+    "images": [
+      "images/products/product-8"
+    ]
+  },
+  {
+    "name": "Spanner Wrench",
+    "price": "$19.00",
+    "compare_at_price": null,
+    "rating": 4,
+    "images": [
+      "images/products/product-9"
+    ]
+  },
+  {
+    "name": "Water Tap",
+    "price": "$15.00",
+    "compare_at_price": null,
+    "rating": 5,
+    "images": [
+      "images/products/product-10"
+    ]
+  },
+  {
+    "name": "Hand Tool Kit",
+    "price": "$149.00",
+    "compare_at_price": null,
+    "rating": 4,
+    "images": [
+      "images/products/product-11"
+    ]
+  },
+  {
+    "name": "Ash's Chainsaw 3.5kW",
+    "price": "$666.99",
+    "compare_at_price": null,
+    "rating": 5,
+    "images": [
+      "images/products/product-12"
+    ]
+  },
+  {
+    "name": "Brandix Angle Grinder KZX3890PQW",
+    "price": "$649.00",
+    "compare_at_price": null,
+    "rating": 2,
+    "images": [
+      "images/products/product-13"
+    ]
+  },
+  {
+    "name": "Brandix Air Compressor DELTAKX500",
+    "price": "$1,800.00",
+    "compare_at_price": null,
+    "rating": 3,
+    "images": [
+      "images/products/product-14"
+    ]
+  },
+  {
+    "name": "Brandix Electric Jigsaw JIG7000BQ",
+    "price": "$290.00",
+    "compare_at_price": null,
+    "rating": 2,
+    "images": [
+      "images/products/product-15"
+    ]
+  },
+  {
+    "name": "Brandix Screwdriver SCREW1500ACC",
+    "price": "$1,499.00",
+    "compare_at_price": null,
+    "rating": 5,
+    "images": [
+      "images/products/product-16",
+      "images/products/product-16-1",
+      "images/products/product-16-2",
+      "images/products/product-16-3",
+      "images/products/product-16-4"
+    ]
+  }
+]

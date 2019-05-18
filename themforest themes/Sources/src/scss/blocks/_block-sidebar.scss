@@ -1,0 +1,44 @@
+/*
+// .block-sidebar
+*/
+@import '../variables';
+@import '../functions';
+@import '../mixins/direction';
+
+
+.block-sidebar {}
+.block-sidebar__item + .block-sidebar__item {
+    margin-top: 30px;
+}
+.block-sidebar--position--start {
+    @include direction {
+        #{$padding-inline-end}: 20px;
+    }
+
+    @media (max-width: breakpoint(lg-end)) {
+        @include direction {
+            #{$padding-inline-end}: 6px;
+        }
+    }
+    @media (max-width: breakpoint(md-end)) {
+        @include direction {
+            #{$padding-inline-end}: 0;
+        }
+    }
+}
+.block-sidebar--position--end {
+    @include direction {
+        #{$padding-inline-start}: 20px;
+    }
+
+    @media (max-width: breakpoint(lg-end)) {
+        @include direction {
+            #{$padding-inline-start}: 6px;
+        }
+    }
+    @media (max-width: breakpoint(md-end)) {
+        @include direction {
+            #{$padding-inline-start}: 0;
+        }
+    }
+}

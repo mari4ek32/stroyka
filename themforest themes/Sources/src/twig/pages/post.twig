@@ -1,0 +1,23 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/partials/page-header.twig' with {
+        title: 'Post',
+        without_title: true
+    } %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                {% include '/partials/post.twig' with {
+                    layout: 'classic'
+                } %}
+            </div>
+            <div class="col-12 col-lg-4">
+                {% include '/partials/blog-sidebar.twig' with {
+                    position: 'end'
+                } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{#
+// inputs:
+// - title:      string   - block title (required)
+// - layout:     string   - one of [classic, compact] (required)
+// - categories: object[] - array of category data objects (required)
+#}
+
+<!-- .block-categories -->
+<div class="block block--highlighted block-categories block-categories--layout--{{ layout }}">
+    <div class="container">
+        {% include '/partials/block-header.twig' with {
+            title: title
+        } only %}
+
+        <div class="block-categories__list">
+            {% for category in categories %}
+                <div class="block-categories__item category-card category-card--layout--{{ layout }}">
+                    <div class="category-card__body">
+                        <div class="category-card__image">
+                            <a href=""><img src="{{ category.image }}" alt=""></a>
+                        </div>
+                        <div class="category-card__content">
+                            <div class="category-card__name">
+                                <a href="{{ category.url }}">{{ category.title }}</a>
+                            </div>
+                            <ul class="category-card__links">
+                                {% for category in category.subcategories %}
+                                    <li><a href="{{ category.url }}">{{ category.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            <div class="category-card__all">
+                                <a href="">Show All</a>
+                            </div>
+                            <div class="category-card__products">
+                                {{ category.products }} Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- .block-categories / end -->

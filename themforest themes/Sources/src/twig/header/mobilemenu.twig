@@ -1,0 +1,16 @@
+<div class="mobilemenu">
+    <div class="mobilemenu__backdrop"></div>
+    <div class="mobilemenu__body">
+        <div class="mobilemenu__header">
+            <div class="mobilemenu__title">Menu</div>
+            <button type="button" class="mobilemenu__close">
+                <svg width="20px" height="20px"><use xlink:href="images/sprite.svg#cross-20"></use></svg>
+            </button>
+        </div>
+        <div class="mobilemenu__content">
+            {% include '/header/mobile-links.twig' with {
+                links: mobilemenu
+            } %}
+        </div>
+    </div>
+</div>

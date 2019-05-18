@@ -1,0 +1,70 @@
+{% set departments_fixed_by = '.block-slideshow' %}
+
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/blocks/block-slideshow.twig' with {
+        layout: 'with-departments'
+    } only %}
+
+    {% include '/blocks/block-features.twig' with {
+        layout: 'classic'
+    } only %}
+
+    {% include '/blocks/block-products-carousel.twig' with {
+        title: 'Featured Products',
+        products: products,
+        layout: 'grid-4',
+        groups: [
+            {name: 'All', active: true},
+            {name: 'Power Tools', active: false},
+            {name: 'Hand Tools', active: false},
+            {name: 'Plumbing', active: false},
+        ]
+    } only %}
+
+    {% include '/blocks/block-banner.twig' with {} only %}
+
+    {% include '/blocks/block-products.twig' with {
+        title: 'Bestsellers',
+        layout: 'large-first',
+        products: products
+    } only %}
+
+    {% include '/blocks/block-categories.twig' with {
+        title: 'Popular Categories',
+        layout: 'classic',
+        categories: block_categories.categories
+    } only %}
+
+    {% include '/blocks/block-products-carousel.twig' with {
+        title: 'New Arrivals',
+        products: products,
+        layout: 'horizontal',
+        rows: 2,
+        groups: [
+            {name: 'All', active: true},
+            {name: 'Power Tools', active: false},
+            {name: 'Hand Tools', active: false},
+            {name: 'Plumbing', active: false},
+        ]
+    } only %}
+
+    {% include '/blocks/block-posts.twig' with {
+        title: 'Latest News',
+        layout: 'list-sm',
+        posts: posts
+    } only %}
+
+    {% include '/blocks/block-brands.twig' with {
+        brands: brands
+    } only %}
+
+    {% include '/blocks/block-product-columns.twig' with {
+        columns: [
+            {title: 'Top Rated Products', products: products[0:3]},
+            {title: 'Special Offers', products: products[3:3]},
+            {title: 'Bestsellers', products: products[6:3]}
+        ]
+    } only %}
+{% endblock %}

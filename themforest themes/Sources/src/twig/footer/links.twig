@@ -1,0 +1,14 @@
+{#
+// inputs:
+// - title: string
+// - links: object[] - e.g.: {title: '', url: ''}
+#}
+
+<div class="site-footer__widget footer-links">
+    <h5 class="footer-links__title">{{ title }}</h5>
+    <ul class="footer-links__list">
+        {% for link in links %}
+            <li class="footer-links__item"><a href="{{ link.url }}" class="footer-links__link">{{ link.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

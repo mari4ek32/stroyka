@@ -1,0 +1,59 @@
+{#
+// inputs:
+// - layout: string - one of [full, with-departments] (required)
+#}
+
+{% set slides = [
+    {
+        title: 'Big choice of<br>Plumbing products',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis molestie.',
+    },
+    {
+        title: 'Screwdrivers<br>Professional Tools',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis molestie.',
+    },
+    {
+        title: 'One more<br>Unique header',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis molestie.',
+    }
+] %}
+
+{% set _body %}
+    {% set _image_postfix = layout == 'full' ? '-full' : '' %}
+    <div class="block-slideshow__body">
+        <div class="owl-carousel">
+            {% for slide in slides %}
+                <a class="block-slideshow__slide" href="">
+                    <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop" style="background-image: url('images/slides/slide-{{ loop.index }}{{ _image_postfix }}.jpg')"></div>
+                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile" style="background-image: url('images/slides/slide-{{ loop.index }}-mobile.jpg')"></div>
+                    <div class="block-slideshow__slide-content">
+                        <div class="block-slideshow__slide-title">{{ slide.title }}</div>
+                        <div class="block-slideshow__slide-text">{{ slide.text }}</div>
+                        <div class="block-slideshow__slide-button">
+                            <span class="btn btn-primary btn-lg">Shop Now</span>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endset %}
+
+<!-- .block-slideshow -->
+<div class="block-slideshow block-slideshow--layout--{{ layout }} block">
+    <div class="container">
+        <div class="row">
+            {% if layout == 'full' %}
+                <div class="col-12">
+                    {{ _body }}
+                </div>
+            {% else %}
+                <div class="col-lg-3 d-none d-lg-block"></div>
+                <div class="col-12 col-lg-9">
+                    {{ _body }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- .block-slideshow / end -->

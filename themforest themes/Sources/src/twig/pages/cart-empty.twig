@@ -1,0 +1,14 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/partials/page-header.twig' with {
+        title: 'Shopping Cart'
+    } %}
+
+    <div class="block-empty__body">
+        <div class="block-empty__message">Your shopping cart is empty!</div>
+        <div class="block-empty__actions">
+            <a class="btn btn-primary btn-sm" href="">Continue</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{#
+// inputs:
+// - title:  string         - block title (required)
+// - arrows: boolean        - show arrows if true (default: false)
+// - groups: object[]|false - array of group objects (e.g., {'name': '', 'active': false}, default: false)
+#}
+
+{% set arrows = arrows|default(false) %}
+{% set groups = groups|default(false) %}
+
+<div class="block-header">
+    <h3 class="block-header__title">{{ title }}</h3>
+    <div class="block-header__divider"></div>
+
+    {% if groups %}
+        <ul class="block-header__groups-list">
+            {% for group in groups %}
+                <li><button type="button" class="block-header__group {% if group.active %} block-header__group--active {% endif %}">{{ group.name }}</button></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if arrows %}
+        <div class="block-header__arrows-list">
+            <button class="block-header__arrow block-header__arrow--left" type="button">
+                <svg width="7px" height="11px"><use xlink:href="images/sprite.svg#arrow-rounded-left-7x11"></use></svg>
+            </button>
+            <button class="block-header__arrow block-header__arrow--right" type="button">
+                <svg width="7px" height="11px"><use xlink:href="images/sprite.svg#arrow-rounded-right-7x11"></use></svg>
+            </button>
+        </div>
+    {% endif %}
+</div>

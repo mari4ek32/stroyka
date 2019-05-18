@@ -1,0 +1,10 @@
+<div class="quickview">
+    <button class="quickview__close" type="button">
+        <svg width="20px" height="20px"><use xlink:href="images/sprite.svg#cross-20"></use></svg>
+    </button>
+
+    {% include '/partials/product.twig' with {
+        layout: 'quickview',
+        product: products[15]
+    } %}
+</div>

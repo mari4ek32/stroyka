@@ -1,0 +1,88 @@
+<!-- .topbar -->
+<div class="site-header__topbar topbar">
+    <div class="topbar__container container">
+        <div class="topbar__row">
+            <div class="topbar__item topbar__item--link">
+                <a class="topbar-link" href="about-us.html">About Us</a>
+            </div>
+            <div class="topbar__item topbar__item--link">
+                <a class="topbar-link" href="contact-us.html">Contacts</a>
+            </div>
+            <div class="topbar__item topbar__item--link">
+                <a class="topbar-link" href="">Store Location</a>
+            </div>
+            <div class="topbar__item topbar__item--link">
+                <a class="topbar-link" href="track-order.html">Track Order</a>
+            </div>
+            <div class="topbar__item topbar__item--link">
+                <a class="topbar-link" href="blog-classic.html">Blog</a>
+            </div>
+            <div class="topbar__spring"></div>
+            <div class="topbar__item">
+                <div class="topbar-dropdown">
+                    <button class="topbar-dropdown__btn" type="button">
+                        My Account
+                        <svg width="7px" height="5px"><use xlink:href="images/sprite.svg#arrow-rounded-down-7x5"></use></svg>
+                    </button>
+
+                    <div class="topbar-dropdown__body">
+                        {% include '/header/menu.twig' with {
+                            layout: 'topbar',
+                            menu_links: [
+                                {title: 'Dashboard',     url: 'account-dashboard.html'},
+                                {title: 'Edit Profile',  url: 'account-profile.html'},
+                                {title: 'Order History', url: 'account-orders.html'},
+                                {title: 'Addresses',     url: 'account-addresses.html'},
+                                {title: 'Password',      url: 'account-password.html'},
+                                {title: 'Logout',        url: 'account-login.html'}
+                            ]
+                        } %}
+                    </div>
+                </div>
+            </div>
+            <div class="topbar__item">
+                <div class="topbar-dropdown">
+                    <button class="topbar-dropdown__btn" type="button">
+                        Currency: <span class="topbar__item-value">USD</span>
+                        <svg width="7px" height="5px"><use xlink:href="images/sprite.svg#arrow-rounded-down-7x5"></use></svg>
+                    </button>
+
+                    <div class="topbar-dropdown__body">
+                        {% include '/header/menu.twig' with {
+                            layout: 'topbar',
+                            menu_links: [
+                                {'title': '€ Euro', 'url': ''},
+                                {'title': '£ Pound Sterling', 'url': ''},
+                                {'title': '$ US Dollar', 'url': ''},
+                                {'title': '₽ Russian Ruble', 'url': ''},
+                            ]
+                        } %}
+                    </div>
+                </div>
+            </div>
+            <div class="topbar__item">
+                <div class="topbar-dropdown">
+                    <button class="topbar-dropdown__btn" type="button">
+                        Language: <span class="topbar__item-value">EN</span>
+                        <svg width="7px" height="5px"><use xlink:href="images/sprite.svg#arrow-rounded-down-7x5"></use></svg>
+                    </button>
+
+                    <div class="topbar-dropdown__body">
+                        {% include '/header/menu.twig' with {
+                            layout: 'topbar',
+                            with_icons: true,
+                            menu_links: [
+                                {'title': 'English', 'url': '', 'icon': 'images/languages/language-1.png', 'icon_srcset': 'images/languages/language-1.png 1x, images/languages/language-1@2x.png 2x'},
+                                {'title': 'French',  'url': '', 'icon': 'images/languages/language-2.png', 'icon_srcset': 'images/languages/language-2.png 1x, images/languages/language-2@2x.png 2x'},
+                                {'title': 'German',  'url': '', 'icon': 'images/languages/language-3.png', 'icon_srcset': 'images/languages/language-3.png 1x, images/languages/language-3@2x.png 2x'},
+                                {'title': 'Russian', 'url': '', 'icon': 'images/languages/language-4.png', 'icon_srcset': 'images/languages/language-4.png 1x, images/languages/language-4@2x.png 2x'},
+                                {'title': 'Italian', 'url': '', 'icon': 'images/languages/language-5.png', 'icon_srcset': 'images/languages/language-5.png 1x, images/languages/language-5@2x.png 2x'},
+                            ]
+                        } %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .topbar / end -->

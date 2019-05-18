@@ -1,0 +1,25 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/partials/page-header.twig' with {
+        title: 'Screwdrivers'
+    } %}
+
+    <div class="container">
+        <div class="shop-layout shop-layout--sidebar--end">
+            <div class="shop-layout__content">
+                <div class="block">
+                    {% include '/partials/products-view.twig' with {
+                        products: products,
+                        layout: 'grid',
+                        grid: 'grid-3-sidebar',
+                        limit: 15
+                    } only %}
+                </div>
+            </div>
+            <div class="shop-layout__sidebar">
+                {% include '/partials/shop-sidebar.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

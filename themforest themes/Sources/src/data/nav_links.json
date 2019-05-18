@@ -1,0 +1,107 @@
+[
+    {"title": "Home", "url": "index.html", "submenu": {
+        "type": "menu",
+        "menu": [
+            {"title": "Home 1", "url": "index.html"},
+            {"title": "Home 2", "url": "index-2.html"}
+        ]
+    }},
+    {"title": "Megamenu", "url": "", "submenu": {
+        "type": "megamenu", "menu": {
+            "size": "nl",
+            "columns": [
+                {"size": 6, "links": [
+                    {"title": "Power Tools", "url": "", "links": [
+                        {"title": "Engravers", "url": ""},
+                        {"title": "Wrenches", "url": ""},
+                        {"title": "Wall Chaser", "url": ""},
+                        {"title": "Pneumatic Tools", "url": ""}
+                    ]},
+                    {"title": "Machine Tools", "url": "", "links": [
+                        {"title": "Thread Cutting", "url": ""},
+                        {"title": "Chip Blowers", "url": ""},
+                        {"title": "Sharpening Machines", "url": ""},
+                        {"title": "Pipe Cutters", "url": ""},
+                        {"title": "Slotting machines", "url": ""},
+                        {"title": "Lathes", "url": ""}
+                    ]}
+                ]},
+                {"size": 6, "links": [
+                    {"title": "Hand Tools", "url": "", "links": [
+                        {"title": "Screwdrivers", "url": ""},
+                        {"title": "Handsaws", "url": ""},
+                        {"title": "Knives", "url": ""},
+                        {"title": "Axes", "url": ""},
+                        {"title": "Multitools", "url": ""},
+                        {"title": "Paint Tools", "url": ""}
+                    ]},
+                    {"title": "Garden Equipment", "url": "", "links": [
+                        {"title": "Motor Pumps", "url": ""},
+                        {"title": "Chainsaws", "url": ""},
+                        {"title": "Electric Saws", "url": ""},
+                        {"title": "Brush Cutters", "url": ""}
+                    ]}
+                ]}
+            ]
+        }
+    }},
+    {"title": "Shop", "url": "shop-grid-3-columns-sidebar.html", "submenu": {
+        "type": "menu",
+        "menu": [
+            {"title": "Shop Grid", "url": "shop-grid-3-columns-sidebar.html", "submenu": [
+                {"title": "3 Columns Sidebar", "url": "shop-grid-3-columns-sidebar.html"},
+                {"title": "4 Columns Full",    "url": "shop-grid-4-columns-full.html"},
+                {"title": "5 Columns Full",    "url": "shop-grid-5-columns-full.html"}
+            ]},
+            {"title": "Shop List", "url": "shop-list.html"},
+            {"title": "Shop Right Sidebar", "url": "shop-right-sidebar.html"},
+            {"title": "Product", "url": "product.html", "submenu": [
+                {"title": "Product", "url": "product.html"},
+                {"title": "Product Alt", "url": "product-alt.html"},
+                {"title": "Product Sidebar", "url": "product-sidebar.html"}
+            ]},
+            {"title": "Cart", "url": "cart.html"},
+            {"title": "Cart Empty", "url": "cart-empty.html"},
+            {"title": "Checkout", "url": "checkout.html"},
+            {"title": "Wishlist", "url": "wishlist.html"},
+            {"title": "Compare", "url": "compare.html"},
+            {"title": "Track Order", "url": "track-order.html"}
+        ]
+    }},
+    {"title": "Account", "url": "account-login.html", "submenu": {
+        "type": "menu",
+        "menu": [
+            {"title": "Login", "url": "account-login.html"},
+            {"title": "Dashboard", "url": "account-dashboard.html"},
+            {"title": "Edit Profile", "url": "account-profile.html"},
+            {"title": "Order History", "url": "account-orders.html"},
+            {"title": "Address Book", "url": "account-addresses.html"},
+            {"title": "Change Password", "url": "account-password.html"}
+        ]
+    }},
+    {"title": "Blog", "url": "blog-classic.html", "submenu": {
+        "type": "menu",
+        "menu": [
+            {"title": "Blog Classic", "url": "blog-classic.html"},
+            {"title": "Blog Grid", "url": "blog-grid.html"},
+            {"title": "Blog List", "url": "blog-list.html"},
+            {"title": "Blog Left Sidebar", "url": "blog-left-sidebar.html"},
+            {"title": "Post Page", "url": "post.html"},
+            {"title": "Post Without Sidebar", "url": "post-without-sidebar.html"}
+        ]
+    }},
+    {"title": "Pages", "url": "", "submenu": {
+        "type": "menu",
+        "menu": [
+            {"title": "About Us", "url": "about-us.html"},
+            {"title": "Contact Us", "url": "contact-us.html"},
+            {"title": "Contact Us Alt", "url": "contact-us-alt.html"},
+            {"title": "404", "url": "404.html"},
+            {"title": "Terms And Conditions", "url": "terms-and-conditions.html"},
+            {"title": "FAQ", "url": "faq.html"},
+            {"title": "Components", "url": "components.html"},
+            {"title": "Typography", "url": "typography.html"}
+        ]
+    }},
+    {"title": "Buy Theme", "url": "https://themeforest.net/item/stroyka-tools-store-html-template/23326943"}
+]

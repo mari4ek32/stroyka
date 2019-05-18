@@ -1,0 +1,112 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/partials/page-header.twig' with {
+        title: 'Shopping Cart'
+    } %}
+
+    <div class="cart block">
+        <div class="container">
+            <table class="cart__table cart-table">
+                <thead class="cart-table__head">
+                <tr class="cart-table__row">
+                    <th class="cart-table__column cart-table__column--image">Image</th>
+                    <th class="cart-table__column cart-table__column--product">Product</th>
+                    <th class="cart-table__column cart-table__column--price">Price</th>
+                    <th class="cart-table__column cart-table__column--quantity">Quantity</th>
+                    <th class="cart-table__column cart-table__column--total">Total</th>
+                    <th class="cart-table__column cart-table__column--remove"></th>
+                </tr>
+                </thead>
+                <tbody class="cart-table__body">
+                {% for product in cart.products %}
+                    <tr class="cart-table__row">
+                        <td class="cart-table__column cart-table__column--image">
+                            <a href=""><img src="{{ product.image }}.jpg" alt=""></a>
+                        </td>
+                        <td class="cart-table__column cart-table__column--product">
+                            <a href="" class="cart-table__product-name">{{ product.name }}</a>
+                            {% if product.options %}
+                                <ul class="cart-table__options">
+                                    {% for option in product.options %}
+                                        <li>{{ option.name }}: {{ option.value }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </td>
+                        <td class="cart-table__column cart-table__column--price" data-title="Price">{{ product.price }}</td>
+                        <td class="cart-table__column cart-table__column--quantity" data-title="Quantity">
+                            <div class="input-number">
+                                <input class="form-control input-number__input" type="number" min="1" value="{{ product.quantity }}">
+                                <div class="input-number__add"></div>
+                                <div class="input-number__sub"></div>
+                            </div>
+                        </td>
+                        <td class="cart-table__column cart-table__column--total" data-title="Total">{{ product.total }}</td>
+                        <td class="cart-table__column cart-table__column--remove">
+                            <button type="button" class="btn btn-light btn-sm btn-svg-icon">
+                                <svg width="12px" height="12px">
+                                    <use xlink:href="images/sprite.svg#cross-12"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="cart__actions">
+                <form class="cart__coupon-form">
+                    <label for="input-coupon-code" class="sr-only">Password</label>
+                    <input type="text" class="form-control" id="input-coupon-code" placeholder="Coupon Code">
+                    <button type="submit" class="btn btn-primary">Apply Coupon</button>
+                </form>
+                <div class="cart__buttons">
+                    <a href="index.html" class="btn btn-light">Continue Shopping</a>
+                    <a href="" class="btn btn-primary cart__update-button">Update Cart</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-end pt-5">
+                <div class="col-12 col-md-7 col-lg-6 col-xl-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Cart Totals</h3>
+
+                            <table class="cart__totals">
+                                <thead class="cart__totals-header">
+                                <tr>
+                                    <th>{{ (cart.totals|first).title }}</th>
+                                    <td>{{ (cart.totals|first).value }}</td>
+                                </tr>
+                                </thead>
+                                <tbody class="cart__totals-body">
+                                {% for total in cart.totals %}
+                                    {% if not loop.last and not loop.first %}
+                                        <tr>
+                                            <th>{{ total.title }}</th>
+                                            <td>
+                                                {{ total.value }}
+                                                {% if total.shipping %}
+                                                    <div class="cart__calc-shipping"><a href="#">Calculate Shipping</a></div>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                                </tbody>
+                                <tfoot class="cart__totals-footer">
+                                <tr>
+                                    <th>{{ (cart.totals|last).title }}</th>
+                                    <td>{{ (cart.totals|last).value }}</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                            <a class="btn btn-primary btn-xl btn-block cart__checkout-button" href="checkout.html">Proceed to checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

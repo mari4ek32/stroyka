@@ -1,0 +1,76 @@
+{% set current_account_page = 'account-dashboard.html' %}
+{% extends '/layouts/account.twig' %}
+
+{% block account_body %}
+    {% set address = addresses|first %}
+
+    <div class="dashboard">
+        <div class="dashboard__profile card profile-card">
+            <div class="card-body profile-card__body">
+                <div class="profile-card__avatar">
+                    <img src="images/avatars/avatar-3.jpg" alt="">
+                </div>
+                <div class="profile-card__name">Helena Garcia</div>
+                <div class="profile-card__email">stroyka@example.com</div>
+                <div class="profile-card__edit">
+                    <a href="account-profile.html" class="btn btn-secondary btn-sm">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard__address card address-card address-card--featured">
+            {% if address.default %}
+                <div class="address-card__badge">Default Address</div>
+            {% endif %}
+            <div class="address-card__body">
+                <div class="address-card__name">{{ address.firstName~' '~address.lastName}}</div>
+                <div class="address-card__row">
+                    {{ address.country }}<br>
+                    {{ address.postcode }}, {{ address.city }}<br>
+                    {{ address.address }}
+                </div>
+                <div class="address-card__row">
+                    <div class="address-card__row-title">Phone Number</div>
+                    <div class="address-card__row-content">{{ address.phone }}</div>
+                </div>
+                <div class="address-card__row">
+                    <div class="address-card__row-title">Email Address</div>
+                    <div class="address-card__row-content">{{ address.email }}</div>
+                </div>
+                <div class="address-card__footer">
+                    <a href="">Edit Address</a>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard__orders card">
+            <div class="card-header">
+                <h5>Recent Orders</h5>
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-table">
+                <div class="table-responsive-sm">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for order in orders[:3] %}
+                            <tr>
+                                <td><a href="">#{{ order.id }}</a></td>
+                                <td>{{ order.date }}</td>
+                                <td>{{ order.status }}</td>
+                                <td>{{ order.total }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

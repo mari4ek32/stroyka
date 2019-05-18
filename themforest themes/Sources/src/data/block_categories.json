@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {"title": "Power Tools", "url": "", "products": 572, "image": "images/categories/category-1.jpg", "subcategories": [
+      {"title": "Screwdrivers", "url": ""},
+      {"title": "Milling Cutters", "url": ""},
+      {"title": "Sanding Machines", "url": ""},
+      {"title": "Wrenches", "url": ""},
+      {"title": "Drills", "url": ""}
+    ]},
+    {"title": "Hand Tools", "url": "", "products": 134, "image": "images/categories/category-2.jpg", "subcategories": [
+      {"title": "Screwdrivers", "url": ""},
+      {"title": "Hammers", "url": ""},
+      {"title": "Spanners", "url": ""},
+      {"title": "Handsaws", "url": ""},
+      {"title": "Paint Tools", "url": ""}
+    ]},
+    {"title": "Machine Tools", "url": "", "products": 301, "image": "images/categories/category-4.jpg", "subcategories": [
+      {"title": "Lathes", "url": ""},
+      {"title": "Milling Machines", "url": ""},
+      {"title": "Grinding Machines", "url": ""},
+      {"title": "CNC Machines", "url": ""},
+      {"title": "Sharpening Machines", "url": ""}
+    ]},
+    {"title": "Power Machinery", "url": "", "products": 79, "image": "images/categories/category-3.jpg", "subcategories": [
+      {"title": "Generators", "url": ""},
+      {"title": "Compressors", "url": ""},
+      {"title": "Winches", "url": ""},
+      {"title": "Plasma Cutting", "url": ""},
+      {"title": "Electric Motors", "url": ""}
+    ]},
+    {"title": "Measurement", "url": "", "products": 366, "image": "images/categories/category-5.jpg", "subcategories": [
+      {"title": "Tape Measure", "url": ""},
+      {"title": "Theodolites", "url": ""},
+      {"title": "Thermal Imagers", "url": ""},
+      {"title": "Calipers", "url": ""},
+      {"title": "Levels", "url": ""}
+    ]},
+    {"title": "Clothes and PPE", "url": "", "products": 81, "image": "images/categories/category-6.jpg", "subcategories": [
+      {"title": "Winter Workwear", "url": ""},
+      {"title": "Summer Workwear", "url": ""},
+      {"title": "Helmets", "url": ""},
+      {"title": "Belts and Bags", "url": ""},
+      {"title": "Work Shoes", "url": ""}
+    ]}
+  ]
+}

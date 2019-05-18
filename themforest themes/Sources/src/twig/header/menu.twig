@@ -1,0 +1,35 @@
+{#
+// inputs:
+// - layout: string, one of [classic, topbar] (default: classic)
+// - with_icons: boolean, (default: false)
+#}
+
+{% set layout = layout|default('classic') %}
+{% set with_icons = with_icons|default(false) %}
+
+<!-- .menu -->
+<ul class="menu menu--layout--{{ layout }} {% if with_icons %} menu--with-icons {% endif %}">
+    {% for link in menu_links %}
+        <li>
+            <a href="{{ link.url }}">
+                {% if with_icons and link.icon %}
+                    <div class="menu__icon"><img {% if link.icon_srcset %} srcset="{{ link.icon_srcset }}" {% endif %} src="{{ link.icon }}" alt=""></div>
+                {% endif %}
+                {{ link.title }}
+                {% if link.submenu %}
+                    <svg class="menu__arrow" width="6px" height="9px">
+                        <use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use>
+                    </svg>
+                {% endif %}
+            </a>
+            {% if link.submenu %}
+                <div class="menu__submenu">
+                    {% include '/header/menu.twig' with {
+                        menu_links: link.submenu
+                    } %}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+<!-- .menu / end -->

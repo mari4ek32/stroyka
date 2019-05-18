@@ -1,0 +1,18 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/partials/page-header.twig' with {
+        title: 'Post',
+        without_title: true
+    } %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-9 col-xl-8">
+                {% include '/partials/post.twig' with {
+                    layout: 'full'
+                } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

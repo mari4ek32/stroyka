@@ -1,0 +1,55 @@
+{#
+// inputs:
+// - title:    string   - block title (required)
+// - layout:   string   - one of [large-first, large-last] (required)
+// - products: object[] - array of product data objects (required)
+#}
+
+<!-- .block-products -->
+<div class="block block-products block-products--layout--{{ layout }}">
+    <div class="container">
+        {% include '/partials/block-header.twig' with {
+            title: title
+        } only %}
+
+        {% set _products = products[:7] %}
+
+        <div class="block-products__body">
+            {% set _large_product %}
+                {% if _products.length %}
+                    <div class="block-products__featured">
+                        <div class="block-products__featured-item">
+                            {% include '/partials/product-card.twig' with {
+                                product: _products[0]
+                            } only %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endset %}
+            {% set _small_products %}
+                {% if _products.length > 1 %}
+                    <div class="block-products__list">
+                        {% for product in _products %}
+                            {% if not loop.first %}
+                                <div class="block-products__list-item">
+                                    {% include '/partials/product-card.twig' with {
+                                        product: product
+                                    } only %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endset %}
+
+            {% if layout == 'large-first' %}
+                {{ _large_product }}
+                {{ _small_products }}
+            {% else %}
+                {{ _small_products }}
+                {{ _large_product }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- .block-products / end -->

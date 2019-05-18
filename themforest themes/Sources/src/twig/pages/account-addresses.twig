@@ -1,0 +1,41 @@
+{% set current_account_page = 'account-addresses.html' %}
+{% extends '/layouts/account.twig' %}
+
+{% block account_body %}
+    <div class="addresses-list">
+        <a href="" class="addresses-list__item addresses-list__item--new">
+            <div class="addresses-list__plus"></div>
+            <div class="btn btn-secondary btn-sm">Add New</div>
+        </a>
+        <div class="addresses-list__divider"></div>
+
+        {% for address in addresses %}
+            <div class="addresses-list__item card address-card">
+                {% if address.default %}
+                    <div class="address-card__badge" *ngIf="address.default">Default</div>
+                {% endif %}
+                <div class="address-card__body">
+                    <div class="address-card__name">{{ address.firstName~' '~address.lastName}}</div>
+                    <div class="address-card__row">
+                        {{ address.country }}<br>
+                        {{ address.postcode }}, {{ address.city }}<br>
+                        {{ address.address }}
+                    </div>
+                    <div class="address-card__row">
+                        <div class="address-card__row-title">Phone Number</div>
+                        <div class="address-card__row-content">{{ address.phone }}</div>
+                    </div>
+                    <div class="address-card__row">
+                        <div class="address-card__row-title">Email Address</div>
+                        <div class="address-card__row-content">{{ address.email }}</div>
+                    </div>
+                    <div class="address-card__footer">
+                        <a href="">Edit</a>&nbsp;&nbsp;
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </div>
+            <div class="addresses-list__divider"></div>
+        {% endfor %}
+    </div>
+{% endblock %}

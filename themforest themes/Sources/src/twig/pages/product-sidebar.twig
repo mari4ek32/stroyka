@@ -1,0 +1,37 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% set product = products[15] %}
+
+    {% include '/partials/page-header.twig' with {
+        title: product.name,
+        without_title: true
+    } %}
+
+    <div class="container">
+        <div class="shop-layout shop-layout--sidebar--start">
+            <div class="shop-layout__sidebar">
+                {% include '/partials/product-sidebar.twig' %}
+            </div>
+            <div class="shop-layout__content">
+                <div class="block">
+                    {% include '/partials/product.twig' with {
+                        product: product,
+                        layout: 'sidebar'
+                    } %}
+
+                    {% include '/partials/product-tabs.twig' with {
+                        with_sidebar: true
+                    } %}
+                </div>
+
+                {% include '/blocks/block-products-carousel.twig' with {
+                    'title': 'Related Products',
+                    'rows': 1,
+                    'layout': 'grid-4-sm',
+                    'with_sidebar': true
+                } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

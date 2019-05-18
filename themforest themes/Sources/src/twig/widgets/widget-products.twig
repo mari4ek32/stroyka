@@ -1,0 +1,25 @@
+<div class="widget-products widget">
+    <h4 class="widget__title">Latest Products</h4>
+    <div class="widget-products__list">
+        {% for product in products[:5] %}
+            <div class="widget-products__item">
+                <div class="widget-products__image">
+                    <a href="product.html"><img src="{{ product.images[0] }}.jpg" alt=""></a>
+                </div>
+                <div class="widget-products__info">
+                    <div class="widget-products__name">
+                        <a href="product.html">{{ product.name }}</a>
+                    </div>
+                    <div class="widget-products__prices">
+                        {% if product.compare_at_price %}
+                            <span class="widget-products__new-price">{{ product.price }}</span>
+                            <span class="widget-products__old-price">{{ product.compare_at_price }}</span>
+                        {% else %}
+                            {{ product.price }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,16 @@
+[
+  {"name": "Latest News", "url": ""},
+  {"name": "Special Offers", "url": "", "subs": [
+    {"name": "Spring Sales", "url": ""},
+    {"name": "Summer Sales", "url": ""},
+    {"name": "Autumn Sales", "url": ""},
+    {"name": "Christmas Sales", "url": ""},
+    {"name": "Other Sales", "url": ""}
+  ]},
+  {"name": "New Arrivals", "url": ""},
+  {"name": "Reviews", "url": ""},
+  {"name": "Drills and Mixers", "url": ""},
+  {"name": "Cordless Screwdrivers", "url": ""},
+  {"name": "Screwdrivers", "url": ""},
+  {"name": "Wrenches", "url": ""}
+]

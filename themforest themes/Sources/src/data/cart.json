@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "image": "images/products/product-1",
+      "name": "Electric Planer Brandix KL370090G 300 Watts",
+      "options": [
+        {"name": "Color", "value": "Yellow"},
+        {"name": "Material", "value": "Aluminium"}
+      ],
+      "rating": 4,
+      "price": "$699.00",
+      "quantity": "2",
+      "total": "$1,398.00"
+    },
+    {
+      "image": "images/products/product-2",
+      "name": "Undefined Tool IRadix DPS3000SY 2700 watts",
+      "options": [],
+      "rating": 3,
+      "price": "$849.00",
+      "quantity": "1",
+      "total": "$849.00"
+    },
+    {
+      "image": "images/products/product-5",
+      "name": "Brandix Router Power Tool 2017ERXPK",
+      "options": [
+        {"name": "Color", "value": "True Red"}
+      ],
+      "rating": 5,
+      "price": "$1,210.00",
+      "quantity": "3",
+      "total": "$3,630.00"
+    }
+  ],
+  "totals": [
+    {"title": "Subtotal", "value": "$5,877.00"},
+    {"title": "Shipping", "value": "$25.00", "shipping": true},
+    {"title": "Tax", "value": "$0.00"},
+    {"title": "Total", "value": "$5,902.00"}
+  ],
+  "checkout_totals": [
+    {"title": "Subtotal", "value":  "$5,877.00"},
+    {"title": "Store Credit", "value":  "$-20.00"},
+    {"title": "Shipping", "value":  "$25.00"},
+    {"title": "Total", "value":  "$5,882.00"}
+  ]
+}

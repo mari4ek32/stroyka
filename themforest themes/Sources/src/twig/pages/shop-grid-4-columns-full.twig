@@ -1,0 +1,21 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% include '/partials/page-header.twig' with {
+        title: 'Screwdrivers'
+    } %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="block">
+                    {% include '/partials/products-view.twig' with {
+                        products: products,
+                        layout: 'grid',
+                        grid: 'grid-4-full'
+                    } only %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

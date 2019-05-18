@@ -1,0 +1,40 @@
+{% set current_account_page = 'account-orders.html' %}
+{% extends '/layouts/account.twig' %}
+
+{% block account_body %}
+    <div class="card">
+        <div class="card-header">
+            <h5>Order History</h5>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-table">
+            <div class="table-responsive-sm">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td><a href="">#{{ order.id }}</a></td>
+                            <td>{{ order.date }}</td>
+                            <td>{{ order.status }}</td>
+                            <td>{{ order.total }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+            {% include '/partials/pagination.twig' %}
+        </div>
+    </div>
+
+{% endblock %}

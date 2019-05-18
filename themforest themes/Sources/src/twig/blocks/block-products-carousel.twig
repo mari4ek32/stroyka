@@ -1,0 +1,51 @@
+{#
+// inputs:
+// - title:        string         - block title (required)
+// - products:     object[]       - array of product data objects (required)
+// - layout:       string         - one of [grid-4, grid-4-sm, grid-5, horizontal] (required)
+// - rows:         integer        - number of rows (default: 1)
+// - groups:       object[]|false - array of group objects (e.g., {'name': '', 'active': false}, default: false)
+// - with_sidebar: boolean        - (default: false)
+#}
+
+{% set rows   = rows|default(1) %}
+{% set groups = groups|default(false) %}
+{% set with_sidebar = with_sidebar|default(false) %}
+
+<!-- .block-products-carousel -->
+<div class="block block-products-carousel" data-layout="{{ layout }}">
+    {% set _content %}
+        {% include '/partials/block-header.twig' with {
+            title: title,
+            groups: groups,
+            arrows: true
+        } only %}
+
+        <div class="block-products-carousel__slider">
+            <div class="block-products-carousel__preloader"></div>
+
+            <div class="owl-carousel">
+                {% for column in products|batch(rows) %}
+                    <div class="block-products-carousel__column">
+                        {% for product in column %}
+                            <div class="block-products-carousel__cell">
+                                {% include '/partials/product-card.twig' with {
+                                    product: product
+                                } only %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endset %}
+
+    {% if with_sidebar %}
+        {{ _content }}
+    {% else %}
+        <div class="container">
+            {{ _content }}
+        </div>
+    {% endif %}
+</div>
+<!-- .block-products-carousel / end -->

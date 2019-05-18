@@ -1,0 +1,31 @@
+{#
+// inputs:
+// - megamenu: object
+#}
+
+<!-- .megamenu -->
+<div class="megamenu {% if layout_departments %} megamenu--departments {% endif %}" {% if megamenu.image %} style="background-image: url('{{ megamenu.image }}');" {% endif %}>
+    <div class="row">
+        {% for column in megamenu.columns %}
+            <div class="col-{{ column.size }}">
+                <ul class="megamenu__links megamenu__links--level--0">
+                    {% for link in column.links %}
+                        <li class="megamenu__item {% if link.links %} megamenu__item--with-submenu {% endif %}">
+                            {% if link.title %}
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                            {% endif %}
+                            {% if link.links %}
+                                <ul class="megamenu__links megamenu__links--level--1">
+                                    {% for link in link.links %}
+                                        <li class="megamenu__item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- .megamenu / end -->

@@ -1,0 +1,20 @@
+<div class="widget-posts widget">
+    <h4 class="widget__title">Latest Posts</h4>
+    <div class="widget-posts__list">
+        {% for post in posts[:3] %}
+            <div class="widget-posts__item">
+                <div class="widget-posts__image">
+                    <a href="">
+                        <img src="{{ post.image }}-thumbnail.jpg" alt="">
+                    </a>
+                </div>
+                <div class="widget-posts__info">
+                    <div class="widget-posts__name">
+                        <a href="">{{ post.title }}</a>
+                    </div>
+                    <div class="widget-posts__date">{{ post.date }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{#
+// inputs:
+// - title:  string   - block title (required)
+// - layout: string   - one of [list-sm, grid-nl] (required)
+// - posts:  object[] - array of post data objects (required)
+#}
+
+<!-- .block-posts -->
+<div class="block block-posts block-posts--layout--{{ layout }}" data-layout="{{ layout }}">
+    <div class="container">
+        {% include '/partials/block-header.twig' with {
+            title: title,
+            arrows: true
+        } only %}
+
+        <div class="block-posts__slider">
+            <div class="owl-carousel">
+                {% for post in posts %}
+                    {% include '/partials/post-card.twig' with {
+                        post: post
+                    } only %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .block-posts / end -->

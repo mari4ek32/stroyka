@@ -1,0 +1,96 @@
+{% extends '/layouts/default.twig' %}
+
+{% block site_body %}
+    {% set products = products[:3] %}
+
+    {% include '/partials/page-header.twig' with {
+        title: 'Compare'
+    } %}
+
+    <div class="block">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="compare-table">
+                    <tbody>
+                    <tr>
+                        <th>Product</th>
+                        {% for product in products %}
+                            <td>
+                                <a class="compare-table__product-link" href="product.html">
+                                    <div class="compare-table__product-image">
+                                        <img src="{{ product.images|first }}.jpg" alt="">
+                                    </div>
+                                    <div class="compare-table__product-name">{{ product.name }}</div>
+                                </a>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Rating</th>
+                        {% for product in products %}
+                            <td>
+                                <div class="compare-table__product-rating">
+                                    {% include '/partials/rating.twig' with {
+                                        rating: product.rating
+                                    } %}
+                                </div>
+                                <div class="compare-table__product-rating-legend">
+                                    7 Reviews
+                                </div>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Availability</th>
+                        {% for product in products %}
+                            <td><span class="compare-table__product-badge badge badge-success">In Stock</span></td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        {% for product in products %}
+                            <td>{{ product.price }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Add To Cart</th>
+                        {% for product in products %}
+                            <td><button class="btn btn-primary">Add To Cart</button></td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>SKU</th>
+                        {% for product in products %}
+                            <td>{{ product.features.sku }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        {% for product in products %}
+                            <td>{{ product.features.weight }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Color</th>
+                        {% for product in products %}
+                            <td>{{ product.features.color }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        {% for product in products %}
+                            <td>{{ product.features.material }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th></th>
+                        {% for product in products %}
+                            <td><button class="btn btn-secondary btn-sm">Remove</button></td>
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{#
+// inputs:
+// - categories: object[] - array of category data objects
+// - location:   string   - one of [blog, shop] (default: blog)
+#}
+
+{% set location = location|default('blog') %}
+
+<div class="widget-categories widget-categories--location--{{ location }} widget">
+    <h4 class="widget__title">Categories</h4>
+    <ul class="widget-categories__list" data-collapse data-collapse-opened-class="widget-categories__item--open">
+        {% for category in categories %}
+            <li class="widget-categories__item" data-collapse-item>
+                <div class="widget-categories__row">
+                    <a href="{{ category.url }}">
+                        <svg class="widget-categories__arrow" width="6px" height="9px">
+                            <use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use>
+                        </svg>
+                        {{ category.name }}
+                    </a>
+                    {% if category.subs %}
+                        <button class="widget-categories__expander" type="button" data-collapse-trigger></button>
+                    {% endif %}
+                </div>
+                {% if category.subs %}
+                    <div class="widget-categories__subs" data-collapse-content>
+                        <ul>
+                            {% for sub in category.subs %}
+                                <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+

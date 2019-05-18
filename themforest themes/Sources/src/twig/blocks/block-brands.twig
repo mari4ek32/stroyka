@@ -1,0 +1,20 @@
+{#
+// inputs:
+// - brands: object[] - array of brand data objects (required)
+#}
+
+<!-- .block-brands -->
+<div class="block block-brands">
+    <div class="container">
+        <div class="block-brands__slider">
+            <div class="owl-carousel">
+                {% for brand in brands %}
+                    <div class="block-brands__item">
+                        <a href=""><img src="{{ brand.image }}" alt=""></a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .block-brands / end -->

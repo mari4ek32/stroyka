@@ -1,0 +1,38 @@
+{#
+// inputs:
+// - comments: array of comments
+// - level: number of the current level of comments (default: 0)
+#}
+{% set level = level|default(0) %}
+<ol class="comments-list comments-list--level--{{ level }}">
+    {% for comment in comments %}
+        <li class="comments-list__item">
+            <div class="comment">
+                <div class="comment__avatar">
+                    <a href=""><img src="{{ comment.avatar }}.jpg" alt=""></a>
+                </div>
+                <div class="comment__content">
+                    <div class="comment__header">
+                        <div class="comment__author">
+                            <a href="">{{ comment.author }}</a>
+                        </div>
+                        <div class="comment__reply">
+                            <button type="button" class="btn btn-xs btn-light">Reply</button>
+                        </div>
+                    </div>
+                    <div class="comment__text">{{ comment.text }}</div>
+                    <div class="comment__date">{{ comment.date }}</div>
+                </div>
+            </div>
+
+            {% if comment.children %}
+                <div class="comment-list__children">
+                    {% include '/partials/comments-list.twig' with {
+                        comments: comment.children,
+                        level: level + 1
+                    } only %}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ol>

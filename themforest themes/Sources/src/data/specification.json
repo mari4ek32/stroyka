@@ -1,0 +1,16 @@
+{
+  "General": {
+    "Material": "Aluminium, Plastic",
+    "Engine Type": "Brushless",
+    "Battery Voltage": "18 V",
+    "Battery Type": "Li-lon",
+    "Number of Speeds": "2",
+    "Charge Time": "1.08 h",
+    "Weight": "1.5 kg"
+  },
+  "Dimensions": {
+    "Length": "99 mm",
+    "Width": "207 mm",
+    "Height": "208 mm"
+  }
+}

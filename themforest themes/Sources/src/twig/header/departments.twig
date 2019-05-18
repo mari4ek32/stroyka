@@ -1,0 +1,45 @@
+<!-- .departments -->
+<div class="departments {% if departments_fixed %} departments--opened departments--fixed {% endif %}" data-departments-fixed-by="{{ departments_fixed_by }}">
+    <div class="departments__body">
+        <div class="departments__links-wrapper">
+            <ul class="departments__links">
+                {% for department in departments %}
+                    <li class="departments__item {% if department.submenu and department.submenu.type == 'menu' %} departments__item--menu {% endif %}">
+                        <a href="">
+                            {{ department.title }}
+                            {% if department.submenu %}
+                                <svg class="departments__link-arrow" width="6px" height="9px"><use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use></svg>
+                            {% endif %}
+                        </a>
+                        {% if department.submenu and department.submenu.type == 'megamenu' %}
+                            <div class="departments__megamenu departments__megamenu--{{ department.submenu.menu.size }}">
+                                {% include '/header/megamenu.twig' with {
+                                    megamenu: department.submenu.menu,
+                                    layout_departments: true
+                                } %}
+                            </div>
+                        {% endif %}
+                        {% if department.submenu and department.submenu.type == 'menu' %}
+                            <div class="departments__menu">
+                                {% include '/header/menu.twig' with {
+                                    menu_links: department.submenu.menu
+                                } %}
+                            </div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <button class="departments__button">
+        <svg class="departments__button-icon" width="18px" height="14px">
+            <use xlink:href="images/sprite.svg#menu-18x14"></use>
+        </svg>
+        Shop By Category
+        <svg class="departments__button-arrow" width="9px" height="6px">
+            <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
+        </svg>
+    </button>
+</div>
+<!-- .departments / end -->

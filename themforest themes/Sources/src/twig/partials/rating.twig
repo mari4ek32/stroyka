@@ -1,0 +1,15 @@
+<div class="rating">
+    <div class="rating__body">
+        {% for i in 1..5 %}
+            <svg class="rating__star {% if rating >= i %}rating__star--active{% endif %}" width="13px" height="12px">
+                <g class="rating__fill"><use xlink:href="images/sprite.svg#star-normal"></use></g>
+                <g class="rating__stroke"><use xlink:href="images/sprite.svg#star-normal-stroke"></use></g>
+            </svg>
+
+            <div class="rating__star rating__star--only-edge {% if rating >= i %}rating__star--active{% endif %}">
+                <div class="rating__fill"><div class="fake-svg-icon"></div></div>
+                <div class="rating__stroke"><div class="fake-svg-icon"></div></div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

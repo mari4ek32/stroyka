@@ -1,0 +1,31 @@
+/*
+// .widget-filters
+*/
+@import '../variables';
+@import '../mixins/card';
+@import '../mixins/direction';
+
+
+.widget-filters {
+    @include card();
+    padding: $widget-shop-padding;
+}
+.widget-filters__item {
+    padding: 8px $widget-shop-padding;
+    margin: 0 (-$widget-shop-padding);
+    border-bottom: 2px solid $card-border-color;
+
+    &:first-child {
+        border-top: 2px solid $card-border-color;
+    }
+}
+.widget-filters__actions {
+    padding-top: 24px;
+    padding-bottom: 16px;
+
+    & > .btn + .btn {
+        @include direction {
+            #{$margin-inline-start}: 8px;
+        }
+    }
+}

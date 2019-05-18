@@ -1,0 +1,11 @@
+<div class="block block-sidebar">
+    <div class="block-sidebar__item">
+        {% include '/widgets/widget-categories.twig' with {
+            categories: shop_categories,
+            location: 'shop'
+        } only %}
+    </div>
+    <div class="block-sidebar__item">
+        {% include '/widgets/widget-products.twig' %}
+    </div>
+</div>

@@ -1,0 +1,91 @@
+[
+  {
+    "title": "Categories",
+    "type": "categories",
+    "options": {
+      "items": [
+        {"type": "parent",  "count": 254, "name": "Construction & Repair"},
+        {"type": "parent",  "count": 75, "name": "Instruments"},
+        {"type": "current", "count": 21, "name": "Power Tools"},
+        {"type": "child",   "count": 15, "name": "Drills & Mixers"},
+        {"type": "child",   "count": 2, "name": "Cordless Screwdrivers"},
+        {"type": "child",   "count": 30, "name": "Screwdrivers"},
+        {"type": "child",   "count": 7, "name": "Wrenches"},
+        {"type": "child",   "count": 5, "name": "Grinding Machines"},
+        {"type": "child",   "count": 2, "name": "Milling Cutters"},
+        {"type": "child",   "count": 9, "name": "Electric Spray Guns"},
+        {"type": "child",   "count": 4, "name": "Jigsaws"},
+        {"type": "child",   "count": 0, "name": "Jackhammers"},
+        {"type": "child",   "count": 12, "name": "Planers"},
+        {"type": "child",   "count": 7, "name": "Glue Guns"}
+      ]
+    }
+  },
+  {
+    "title": "Price",
+    "type": "price",
+    "options": {
+      "min": 500,
+      "max": 1500,
+      "from": 590,
+      "to": 1130
+    }
+  },
+  {
+    "title": "Brand",
+    "type": "checkbox",
+    "options": {
+      "items": [
+        {"title": "Wakita", "count": 7, "checked": false, "disabled": false},
+        {"title": "Zosch", "count": 42, "checked": true, "disabled": false},
+        {"title": "WeVALT", "count": 0, "checked": true, "disabled": true},
+        {"title": "Hammer", "count": 0, "checked": false, "disabled": true},
+        {"title": "Mitasia", "count": 1, "checked": false, "disabled": false},
+        {"title": "Metaggo", "count": 25, "checked": false, "disabled": false}
+      ]
+    }
+  },
+  {
+    "title": "Brand",
+    "type": "radio",
+    "options": {
+      "name": "filter_radio",
+      "items": [
+        {"title": "Wakita", "count": 7, "checked": false, "disabled": false},
+        {"title": "Zosch", "count": 42, "checked": false, "disabled": false},
+        {"title": "WeVALT", "count": 0, "checked": true, "disabled": true},
+        {"title": "Hammer", "count": 0, "checked": false, "disabled": true},
+        {"title": "Mitasia", "count": 1, "checked": false, "disabled": false},
+        {"title": "Metaggo", "count": 25, "checked": false, "disabled": false}
+      ]
+    }
+  },
+  {
+    "title": "Color",
+    "type": "color",
+    "options": {
+      "items": [
+        {"title": "Color 1",  "color": "#fff",    "checked": false, "disabled": false, "white": true,  "light": false},
+        {"title": "Color 2",  "color": "#d9d9d9", "checked": false, "disabled": false, "white": false, "light": true},
+        {"title": "Color 3",  "color": "#b3b3b3", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 4",  "color": "#808080", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 5",  "color": "#666",    "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 6",  "color": "#4d4d4d", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 7",  "color": "#262626", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 8",  "color": "#ff4040", "checked": true,  "disabled": false, "white": false, "light": false},
+        {"title": "Color 9",  "color": "#ff8126", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 10", "color": "#ffd440", "checked": false, "disabled": false, "white": false, "light": true},
+        {"title": "Color 11", "color": "#becc1f", "checked": false, "disabled": false, "white": false, "light": true},
+        {"title": "Color 12", "color": "#8fcc14", "checked": true,  "disabled": false, "white": false, "light": false},
+        {"title": "Color 13", "color": "#47cc5e", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 14", "color": "#47cca0", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 15", "color": "#47cccc", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 16", "color": "#40bfff", "checked": false, "disabled": true,  "white": false, "light": false},
+        {"title": "Color 17", "color": "#3d6dcc", "checked": true,  "disabled": false, "white": false, "light": false},
+        {"title": "Color 18", "color": "#7766cc", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 19", "color": "#b852cc", "checked": false, "disabled": false, "white": false, "light": false},
+        {"title": "Color 20", "color": "#e53981", "checked": false, "disabled": false, "white": false, "light": false}
+      ]
+    }
+  }
+]

@@ -1,0 +1,49 @@
+{#
+// inputs:
+// - post:   object      - post data object (required)
+// - layout: string|null - one of [grid-nl, grid-lg, list-nl, list-sm] (default: null)
+#}
+
+{% set layout = layout|default(null) %}
+
+{% set _layout_class = layout == null ? '' : {
+    'grid-nl': 'post-card--layout--grid',
+    'grid-lg': 'post-card--layout--grid',
+    'list-nl': 'post-card--layout--list',
+    'list-sm': 'post-card--layout--list',
+}[layout] %}
+
+{% set _size_class = layout == null ? '' : {
+    'grid-nl': 'post-card--size--nl',
+    'grid-lg': 'post-card--size--lg',
+    'list-nl': 'post-card--size--nl',
+    'list-sm': 'post-card--size--sm',
+}[layout] %}
+
+
+<div class="post-card {{ _layout_class }} {{ _size_class }}">
+    <div class="post-card__image">
+        <a href="">
+            <img src="{{ post.image }}.jpg" alt="">
+        </a>
+    </div>
+    <div class="post-card__info">
+        <div class="post-card__category">
+            {% for category in post.categories %}
+                <a href="">{{ category }}</a>
+            {% endfor %}
+        </div>
+        <div class="post-card__name">
+            <a href="">{{ post.title }}</a>
+        </div>
+        <div class="post-card__date">{{ post.date }}</div>
+        <div class="post-card__content">
+            In one general sense, philosophy is associated with wisdom,
+            intellectual culture and a search for knowledge.
+            In that sense, all cultures...
+        </div>
+        <div class="post-card__read-more">
+            <a href="" class="btn btn-secondary btn-sm">Read More</a>
+        </div>
+    </div>
+</div>
