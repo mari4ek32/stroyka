@@ -1,5 +1,6 @@
 <template>
   <div>
+    <main-header></main-header>
     <nuxt/>
   </div>
 </template>
@@ -51,3 +52,9 @@ html {
 }
 </style>
 
+<script>
+  import MainHeader from "./main_header/MainHeader";
+  export default {
+    components: {MainHeader}
+  }
+</script>
