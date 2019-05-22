@@ -8,13 +8,21 @@
           <li class="nav-item"><nuxt-link class="nav-link" to="/track_order">{{ 'Отследить заказ' }}</nuxt-link></li>
         </ul>
       </div>
+      <low-header @my-event="dosmth"></low-header>
     </nav>
 </template>
 
 <script>
-    export default {
-        name: 'main-header'
+  import LowHeader from "./LowHeader";
+  export default {
+    name: 'main-header',
+    components: {LowHeader},
+    methods: {
+      dosmth (name) {
+        alert(name)
+      }
     }
+  }
 </script>
 
 <style scoped>
