@@ -1,6 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="collapse navbar-collapse">
+        <nuxt-link class="navbar-brand" to="/"><img style="max-width: 90px" src="/logo.png" alt="Лого"/></nuxt-link>
         <ul class="navbar-nav">
           <li class="nav-item"><nuxt-link class="nav-link" to="/about_us">{{ 'О нас' }}</nuxt-link></li>
           <li class="nav-item"><nuxt-link class="nav-link" to="contacts">{{ 'Контакты' }}</nuxt-link></li>
