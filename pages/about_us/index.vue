@@ -1,10 +1,10 @@
 <template>
-    <div>{{'Root /about_us'}}</div>
+    <div>{{'Root about us'}}</div>
 </template>
 
 <script>
     export default {
-        name: "about_us"
+      name: 'about_us'
     }
 </script>
 

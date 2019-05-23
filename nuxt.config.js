@@ -13,14 +13,15 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: [
-    '~/assets/styles/main.css',
-    '~/assets/styles/bootstrap-4.3.1-dist/css/bootstrap-grid.css',
-    '~/assets/styles/bootstrap-4.3.1-dist/css/bootstrap.css',
+
+  css:[
+    '~assets/styles/bootstrap/css/bootstrap.css',
+    '~assets/styles/bootstrap/css/bootstrap-grid.css',
   ],
+
   js: [
-    '~/assets/styles/bootstrap-4.3.1-dist/js/bootstrap.bandle.js',
-    '~/assets/styles/bootstrap-4.3.1-dist/js/bootstrap.js'
+    '~assets/styles/bootstrap/js/bootstrap.bundle.js',
+    '~assets/styles/bootstrap/js/bootstrap.js'
   ],
   /*
   ** Customize the progress bar color

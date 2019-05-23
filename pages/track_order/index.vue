@@ -1,11 +1,11 @@
 <template>
-    <div>{{'Root /track_order'}}</div>
+    <div>{{ 'Root track order' }}</div>
 </template>
 
 <script>
-    export default {
-        name: "track-order"
-    }
+  export default {
+    name: 'track_order'
+  }
 </script>
 
 <style scoped>

@@ -1,11 +1,11 @@
 <template>
-    <div>{{'Root /contacts'}}</div>
+    <div>{{'Root contacts'}}</div>
 </template>
 
 <script>
-    export default {
-        name: "contacts"
-    }
+  export default {
+    name: 'contacts'
+  }
 </script>
 
 <style scoped>
