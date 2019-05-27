@@ -1,7 +1,12 @@
 <template>
   <div>
     <main-header></main-header>
-    <nuxt/>
+    <div class="row">
+      <navigation-root class="col-md-2 position-fixed"></navigation-root>
+      <div class="container col-sm-7">
+        <nuxt/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,7 +59,8 @@ html {
 
 <script>
   import MainHeader from "./main_header/MainHeader";
+  import NavigationRoot from "./navigation/NavigationRoot";
   export default {
-    components: {MainHeader}
+    components: {NavigationRoot, MainHeader}
   }
 </script>
